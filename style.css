@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*centres stuff VERTICALLY WHY DO I ALWAYS FORGET THIS POOR ME*/
+    align-items: center;
+    background-color: rgba(162, 205, 240, 0.945);
+    margin: 0;
+    height: 100vh; /* don let them vieweres scroll mwehehehehehhe */
+    overflow: hidden; /* this is supposed to prevent scrolling but god knows m tripping so idk */
+}
+
+#myh1 {
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin-bottom: 15px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 3px solid;
+    border-radius: 20px;
+    background-color: rgb(255, 252, 252);
+    width: 90%; /* to make it responsive (or not to make it r, that is the qn) */
+    max-width: 400px; /* gives yall max size duh*/
+    box-sizing: border-box; /* Ii think this inlcudes padidng wdth n stuff? or am i tripping */
+}
+
+#display {
+    font-size: 2.5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: grey;
+    text-shadow: 3px 3px 2px hsl(0, 0%, 84%);
+    margin-bottom: 20px;
+    text-align: center; /* r u hungry?cuz i am, text remains centered */
+}
+
+#controls {
+    display: flex;
+    flex-wrap: wrap; /* guess what fammm , makes buttons stack on smaller screens */
+    justify-content: center;
+    gap: 10px;
+}
+
+#controls button {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    flex: 1 1 30%; /* we write this stuff so that buttons take up equal space */
+    min-width: 100px; /* this gives min width for buttons */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.678);
+    transition: background-color 0.4s ease;
+    text-align: center; /* Ensures text stays centered */
+}
+
+#startbtn {
+    background-color: hsl(120, 47%, 64%);
+}
+
+#startbtn:hover {
+    background-color: hsl(120, 39%, 32%);
+}
+
+#stopbtn {
+    background-color: hsl(0, 58%, 70%);
+}
+
+#stopbtn:hover {
+    background-color: hsl(0, 66%, 55%);
+}
+
+#resetbtn {
+    background-color:hsl(220, 67%, 80%);
+}
+
+#resetbtn:hover {
+    background-color: hsl(220, 61%, 51%) ;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    #myh1 {
+        font-size: 2rem;
+    }
+
+    #display {
+        font-size: 2rem;
+    }
+
+    #controls button {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+}
